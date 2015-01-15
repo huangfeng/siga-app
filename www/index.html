@@ -21,6 +21,22 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/soapclient.js"></script>
+    <script src="js/processo.js"></script>
+	
+    <!--script type="text/javascript">
+	   function buscarProcesso() {    
+
+		    var url = "http://192.168.1.50:8081/sigaex/servicos/ExService";
+		    var params = new SOAPClientParameters();
+
+		    params.add("numeroProcesso", document.getElementById("numProcesso").value);
+
+		    var resposta = SOAPClient.invoke(url, "consultaMovimentacaoProcesso", params, false, null);    	    
+		    alert(resposta.contents);
+	   };ss
+    </script-->
+
 </head>
 <body ng-app="starter">
 <ion-header-bar align-title="center" class="bar-positive">
@@ -40,21 +56,22 @@
     <br/>
 
     <div class="painel_busca">
-        <form name="formBuscaProcesso" ng-controller="ProcessoController" action="resultado_busca.html">
+        <form name="formBuscaProcesso" ng-controller="ConsultaController" ng-submit="buscarProcesso()">
             <div class="bar">
                 <h4 class="title" style="color: #0c63ee; font-family: Arial, san-serif; font-size: 18px">Número do Processo</h4>
             </div>
             <br/>
             <br/>
             <br/>
-            <input class="text-center" type="text" maxlength="13">
+            <input class="text-center" type="text" maxlength="17" ng-model="numProcesso">
             <br/>
 
             <div class="text-center">
-                <button class="button button-outline button-positive icon-left ion-ios-search-strong" ng-click="buscaProcesso()">
+                <button class="button button-outline button-positive icon-left ion-ios-search-strong">
                     Buscar
                 </button>
             </div>
+	    <input type="submit" id="submit" value="Submit" />
         </form>
         <br/>
         <br/>
