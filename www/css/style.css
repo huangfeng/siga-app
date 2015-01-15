@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+
+
+.painel_busca
+{
+    padding: 10px;
+}
+
+input[type="text"] {
+    font-family: Arial, san-serif;
+    font-size: large;
+    border:1px solid #d5d5d5;
+}
