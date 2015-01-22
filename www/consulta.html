@@ -1,0 +1,31 @@
+<ion-view>
+	<ion-content padding="true">
+		<div class="painel_busca">
+			<form name="formBuscaProcesso" ng-controller="ConsultaController" ng-submit="submit()">
+			    <div class="bar">
+				<h4 class="title" style="color: #0c63ee; font-family: Arial, san-serif; font-size: 18px">Número do Processo</h4>
+			    </div>
+			    <br/>
+			    <br/>
+			    <br/>
+			    <input class="text-center" type="text" maxlength="17" ng-model="numProcesso">
+			    <br/>
+
+			    <div class="text-center">
+				<button class="button button-outline button-positive icon-left ion-ios-search-strong">
+				    Buscar
+				</button>
+			    </div>
+			</form>
+			<br/>
+			<br/>
+			<br/>
+			<div class="text-center" style="color: #0c63ee;">
+			    Para efetuar uma consulta, digite o número do processo sem barra (/) e sem hifén (-).
+			</div>
+		</div>	  
+	</ion-content>
+</ion-view>
+
+
+

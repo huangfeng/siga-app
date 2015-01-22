@@ -1,0 +1,21 @@
+<ion-view>
+	<ion-content padding="true">
+		<div class="resultado_busca" ng-controller="ResultadoController">
+
+			<div class="row .responsive-sm linha" style="background-color:#0057af;">
+				<div class="col col-20 coluna">Data</div>
+				<div class="col coluna">Evento</div>
+				<div class="col col-20 coluna">Lotação</div>			  
+			</div>
+		        <div ng-repeat="(chave, movs) in dados" style="background-color:#aad4ff;">
+		                <div class="row .responsive-sm linha" ng-repeat="mov in movs">
+					  <div class="col col-20 coluna"><span>{{mov.dataEvento}}</span></div>
+					  <div class="col coluna"><span>{{mov.tipoEvento}}</span></div>
+					  <div class="col col-20 coluna"><span>{{mov.lotacaoAtendente}}</span></div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
+
+

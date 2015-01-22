@@ -11,3 +11,19 @@ input[type="text"] {
     font-size: large;
     border:1px solid #d5d5d5;
 }
+
+.coluna{
+   border-style: solid;
+   border-width: 1px;
+}
+
+.linha
+{
+  text-align: center;
+  color: #FFFFFF;   
+}
+
+span{
+  color: #000000; 
+}
+
